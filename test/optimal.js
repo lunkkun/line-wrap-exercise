@@ -14,19 +14,19 @@ describe('Optimal', () => {
 
   it('splits three words over two lines', () => {
     let text = 'three word sentence'
-    expect(optimal(text, 12)).to.equal("three word\nsentence")
+    expect(optimal(text, 12)).to.equal('three word\nsentence')
   })
 
   it('ignores last line in cost', () => {
     let text = 'ignores last line'
-    expect(optimal(text, 12)).to.equal("ignores last\nline")
+    expect(optimal(text, 12)).to.equal('ignores last\nline')
   })
 
   it('trims leading whitespace', () => {
     let text = '  text'
     expect(optimal(text, 20)).to.equal('text')
 
-    text = "\ntext"
+    text = '\ntext'
     expect(optimal(text, 20)).to.equal('text')
   })
 
@@ -34,12 +34,12 @@ describe('Optimal', () => {
     let text = 'text  '
     expect(optimal(text, 20)).to.equal('text')
 
-    text = "text\n"
+    text = 'text\n'
     expect(optimal(text, 20)).to.equal('text')
   })
 
   it('reduces consecutive whitespaces to a single whitespace', () => {
-    let text = "two   \nwords"
+    let text = 'two   \nwords'
     expect(optimal(text, 20)).to.equal('two words')
   })
 

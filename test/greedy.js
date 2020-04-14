@@ -14,14 +14,14 @@ describe('Greedy', () => {
 
   it('splits three words over two lines', () => {
     let text = 'three word sentence'
-    expect(greedy(text, 12)).to.equal("three word\nsentence")
+    expect(greedy(text, 12)).to.equal('three word\nsentence')
   })
 
   it('trims leading whitespace', () => {
     let text = '  text'
     expect(greedy(text, 20)).to.equal('text')
 
-    text = "\ntext"
+    text = '\ntext'
     expect(greedy(text, 20)).to.equal('text')
   })
 
@@ -29,12 +29,12 @@ describe('Greedy', () => {
     let text = 'text  '
     expect(greedy(text, 20)).to.equal('text')
 
-    text = "text\n"
+    text = 'text\n'
     expect(greedy(text, 20)).to.equal('text')
   })
 
   it('reduces consecutive whitespaces to a single whitespace', () => {
-    let text = "two   \nwords"
+    let text = 'two   \nwords'
     expect(greedy(text, 20)).to.equal('two words')
   })
 
