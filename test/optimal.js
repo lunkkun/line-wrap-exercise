@@ -43,13 +43,13 @@ describe('Optimal', () => {
     expect(optimal(text, 20)).to.equal('two words')
   })
 
-  it('throws an exception when encountering a word that\'s too long for a single line', () => {
+  it('throws an error when encountering a word that\'s too long for a single line', () => {
     let text = 'sentence'
-    expect(() => optimal(text, 7)).to.throw('Found a word that doesn\'t fit on a single line')
+    expect(() => optimal(text, 7)).to.throw('Encountered a word that doesn\'t fit on a single line')
     expect(optimal(text, 8)).to.equal(text)
 
     text = 'A sentence with only one word that\'s longer than requested.'
-    expect(() => optimal(text, 8)).to.throw('Found a word that doesn\'t fit on a single line')
+    expect(() => optimal(text, 8)).to.throw('Encountered a word that doesn\'t fit on a single line')
   })
 
   it('evens out the lines', () => {
