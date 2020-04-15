@@ -1,5 +1,5 @@
 const {expect} = require('chai')
-const greedy = require('../lib/greedy')
+const greedy = require('../src/greedy')
 
 describe('Greedy', () => {
   it('can handle an empty string', () => {

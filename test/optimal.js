@@ -1,5 +1,5 @@
 const {expect} = require('chai')
-const optimal = require('../lib/optimal')
+const optimal = require('../src/optimal')
 
 describe('Optimal', () => {
   it('can handle an empty string', () => {
