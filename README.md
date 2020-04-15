@@ -87,3 +87,9 @@ I've supplied tests for both algorithms. You can run them by running `npm test`.
 To run a test for only the greedy algorithm, run `npm test test/greedy`
 
 Your job will be done once all tests are passing!
+
+## Solutions
+
+I've supplied my own solutions in the branch `solution`.
+
+No peeking before you've tried it yourself!
