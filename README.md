@@ -2,6 +2,8 @@
 
 As an exercise, create two line wrapping algorithms.
 
+The programming language we're using in this exercise is [Node.js](https://nodejs.org/)
+
 
 ## Introduction
 
