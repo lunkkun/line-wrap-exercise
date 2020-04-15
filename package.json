@@ -1,7 +1,8 @@
 {
-  "name": "line-wrap",
+  "name": "line-wrap-exercise",
   "version": "1.0.0",
-  "description": "As an exercise, creating a line wrapping algorithm.",
+  "description": "As an exercise, create a line wrapping algorithm.",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
