@@ -1,4 +1,4 @@
-# Line wrap exercise
+# Line wrap exercise in Node.js
 
 As an exercise, create two line wrapping algorithms.
 
