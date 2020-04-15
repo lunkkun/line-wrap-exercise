@@ -1,25 +1,3 @@
-const wsChars = [' ', '\f', '\n', '\r', '\t']
-
-function addWord(line, word) {
-  if (word !== '') {
-    if (line !== '') {
-      line += ' '
-    }
-    line += word
-  }
-  return line
-}
-
-function addLine(result, line) {
-  if (line !== '') {
-    if (result !== '') {
-      result += "\n"
-    }
-    result += line
-  }
-  return result
-}
-
 /**
  * Wraps a text over multiple lines in a greedy fashion,
  * i.e. tries to place as many words on the first line,
@@ -29,36 +7,7 @@ function addLine(result, line) {
  * @param width The maximum width in characters of each line
  */
 function wrapGreedy(text, width) {
-  if (typeof width !== 'number' || width <= 0) {
-    throw new Error('width should be a number greater than 0')
-  }
-
-  let result = ''
-
-  let line = ''
-  let word = ''
-
-  for (const char of text) {
-    if (wsChars.includes(char)) {
-      line = addWord(line, word)
-      word = ''
-    } else {
-      word += char
-      if (word.length > width) {
-        throw new Error('Encountered a word that doesn\'t fit on a single line')
-      }
-    }
-
-    if (line.length + (line === '' ? 0 : 1) + word.length > width) {
-      result = addLine(result, line)
-      line = ''
-    }
-  }
-
-  line = addWord(line, word)
-  result = addLine(result, line)
-
-  return result
+  // TODO: implement
 }
 
 module.exports = wrapGreedy

@@ -1,45 +1,3 @@
-function calculateCost(lines, width) {
-  const lastIndex = lines.length - 1
-  return lines.reduce((cost, line, index) => {
-    return cost + (index < lastIndex ? Math.pow(width - line.length, 2) : 0)
-  }, 0)
-}
-
-function wrapWords(words, width, cache = [[]]) {
-  if (words.length in cache) {
-    return cache[words.length]
-  }
-
-  let [line, ...remaining] = words
-
-  let optimal = null
-  let optimalCost = null
-
-  while (line.length <= width) {
-    const optimalForRemaining = wrapWords(remaining, width, cache)
-    const proposed = [line, ...optimalForRemaining]
-
-    const costForProposed = calculateCost(proposed, width)
-    if (optimalCost === null || costForProposed < optimalCost) {
-      optimal = proposed
-      optimalCost = costForProposed
-    }
-
-    if (remaining.length === 0) {
-      break;
-    }
-
-    line += ' ' + remaining.shift()
-  }
-
-  if (optimal === null) {
-    throw new Error('Encountered a word that doesn\'t fit on a single line')
-  }
-
-  cache[words.length] = optimal
-  return optimal
-}
-
 /**
  * Wraps a text over multiple lines in an optimal fashion,
  * i.e. tries to wrap the text in such a way that the length
@@ -52,15 +10,7 @@ function wrapWords(words, width, cache = [[]]) {
  * @param width The maximum width in characters of each line
  */
 function wrapOptimal(text, width) {
-  if (typeof width !== 'number' || width <= 0) {
-    throw new Error('width should be a number greater than 0')
-  }
-
-  const words = text.trim().split(/\s+/)
-
-  const lines = wrapWords(words, width)
-
-  return lines.join('\n')
+  // TODO: implement
 }
 
 module.exports = wrapOptimal
