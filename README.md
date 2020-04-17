@@ -61,7 +61,7 @@ with a line containing a single word without any penalty.
 
 Following this cost calculation, the total cost of the previous example would be:
 
-1^2 + 3^2 + 8^2 = 1 + 9 + 64 = 74
+1² + 3² + 8² = 1 + 9 + 64 = 74
 
 The optimal result for the previous example text would be:
 
@@ -74,7 +74,7 @@ twenty-four
 
 with a total cost of:
 
-6^2 + 5^5 + 1^2 = 36 + 25 + 1 = 62
+6² + 5² + 1² = 36 + 25 + 1 = 62
 
 
 ## Start coding!
